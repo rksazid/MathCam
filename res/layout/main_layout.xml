@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:auto="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:text="Math Cam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/buttonmathcam"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false"
+        android:background="@android:color/black"
+        android:layout_alignParentStart="true"
+        style="@style/Widget.AppCompat.Button"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/importedImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonmathcam"
+        android:layout_alignBottom="@+id/my_java_camera" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonprocess">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@android:color/darker_gray">
+
+
+            <TextView
+                android:text="Equation"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewequation"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Result"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textviewresult"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:background="@android:color/background_dark"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/buttonprocess"
+        android:textStyle="normal|bold|italic"
+        android:background="@drawable/processicon1"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/buttonimport"
+        android:background="@drawable/galleryicon1"
+        android:textStyle="normal|bold|italic"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/buttonprocess" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:id="@+id/buttoncamera"
+        android:background="@drawable/redcameraicon"
+        android:textStyle="normal|bold|italic"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/buttonprocess"
+        android:layout_alignTop="@+id/buttonimport" />
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/my_java_camera"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/buttonmathcam"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
